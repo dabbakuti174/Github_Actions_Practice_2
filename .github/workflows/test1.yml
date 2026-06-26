@@ -1,17 +1,19 @@
-  name: Hello Sri
-
-  on:
-    workflow_dispatch: 
-
-  jobs:
-    hello:
+ name: Running Multiple jobs
+ on: workflow_dispatch
+ jobs:
+   build:
       runs-on: ubuntu-latest
-
       steps: 
-        - name: Print Greeting
-          run: |
-             echo "Hello, Srikanth DAbbakuti!!"
-             echo "Hello, Rajiv Gandhi Int stadium@@"
-          
-      
-      
+         - name: Build job
+           run: echo "This is build job!"
+   test:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Test job
+           run: echo "This is test job@"
+   deploy:
+      runs-on: ubuubuntu-latest
+      steps:
+         - name: deploy job
+           run: echo "This is deploy job#"
+ 
