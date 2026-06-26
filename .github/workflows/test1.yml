@@ -1,0 +1,14 @@
+  name: Hello Sri
+
+  on:
+    workflow_dispatch: 
+
+  jobs:
+    hello:
+      runs-on: ubuntu-latest
+
+      steps: 
+        - name: Print Greeting
+          run: echo "Hello, Srikanth DAbbakuti!!"
+      
+      
