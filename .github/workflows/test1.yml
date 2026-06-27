@@ -1,19 +1,24 @@
- name: Running Multiple jobs
+ name: sequentially running jobs
  on: workflow_dispatch
  jobs:
-   build:
-      runs-on: ubuntu-latest
-      steps: 
+    build:
+       runs-on: ubuntu-latest
+       steps:
          - name: Build job
-           run: echo "This is build job!"
-   test:
-      runs-on: ubuntu-latest
-      steps:
-         - name: Test job
-           run: echo "This is test job@"
-   deploy:
-      runs-on: ubuubuntu-latest
-      steps:
-         - name: deploy job
-           run: echo "This is deploy job#"
+           run: echo "This is Build job!!"
+
+    test:
+       runs-on: ubuntu-latest
+       needs: build
+       steps:
+         - name: Test Job
+           run: echo "This is Test job@@@"
+
+    deploy: 
+        runs-on: ubuntu-latest
+        needs: test
+        steps:
+          - name: Deploy job
+            run: echo "This is deploy job####"
+   
  
