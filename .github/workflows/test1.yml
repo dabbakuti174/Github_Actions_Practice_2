@@ -20,5 +20,10 @@
         steps:
           - name: Deploy job
             run: echo "This is deploy job####"
-   
+
+    prod:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Prod job
+           run: echo "This is Prod%%"
  
