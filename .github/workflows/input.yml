@@ -1,0 +1,19 @@
+name: input
+on: 
+  workflow_dispatch:
+    inputs:
+      Test: 
+        description: This is Test input env
+        required: true
+        default: test
+
+  jobs:
+    inputvalues:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Deploy the app
+           run: echo "Deploy the application to ${{inputs.Test}}"
+       
+      
+ 
+     
