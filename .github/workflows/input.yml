@@ -5,7 +5,11 @@ on:
       Test: 
         description: This is Test input env
         required: true
-        default: test
+        default: 
+           - test
+           - dev
+           - prod
+           - uat
 
 jobs:
     inputvalues:
