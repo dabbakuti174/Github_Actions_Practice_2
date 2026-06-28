@@ -5,7 +5,9 @@ on:
       Test: 
         description: This is Test input env
         required: true
-        default: 
+        default: sri
+        type: choice
+        options:
            - test
            - dev
            - prod
