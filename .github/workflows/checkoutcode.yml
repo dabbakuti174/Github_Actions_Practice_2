@@ -1,0 +1,11 @@
+name: checkout code
+on: workflow_dispatch
+jobs:
+  checkout:
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout index.html
+         uses: actions/checkout@v6
+       - name: Print the index.html
+         run: cat index.html
+     
