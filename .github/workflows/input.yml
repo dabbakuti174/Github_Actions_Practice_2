@@ -7,7 +7,7 @@ on:
         required: true
         default: test
 
-  jobs:
+jobs:
     inputvalues:
        runs-on: ubuntu-latest
        steps:
