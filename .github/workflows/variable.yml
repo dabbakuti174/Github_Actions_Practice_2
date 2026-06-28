@@ -1,0 +1,8 @@
+name: variable
+on: workflow_dispatch
+jobs:
+  variable:
+     runs-on: ubuntu-latest
+     steps:
+        - name: variable practice
+          run: echo hello, "${{vars.MY_LOVE}}"
