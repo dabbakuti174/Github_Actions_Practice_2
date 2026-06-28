@@ -24,6 +24,6 @@
     prod:
       runs-on: ubuntu-latest
       steps:
-         - name: Prod job
+         - name: Production job
            run: echo "This is Prod%%"
  
